@@ -7,12 +7,12 @@ const typeDefs = gql`
     image: String!
     price: Number!
     description: String!
-    category: Schema.Types.ObjectId
+    category: Category!
   }
 
   type Category {
     _id: ID
-    name: String
+    name: String!
   }
 
   type User {
