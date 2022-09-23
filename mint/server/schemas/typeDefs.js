@@ -5,7 +5,7 @@ const typeDefs = gql`
     _id: ID!
     title: String!
     image: String!
-    price: Number!
+    price: Int!
     description: String!
     category: Category!
   }
@@ -25,7 +25,7 @@ const typeDefs = gql`
   type Order {
     _id: ID
     purchaseDate: String
-    products: [Product]
+    products: [Listing]
   }
 
   type Checkout {
@@ -40,7 +40,7 @@ const typeDefs = gql`
   type Query {
     categories: [Category]
     user: User
-    listing(category: ID, name: String): [Listing]
+    listings(category: ID, name: String): [Listing]
     listing(_id: String): Listing
     order(_id: ID!): Order
     checkout(products: [ID]!): Checkout
