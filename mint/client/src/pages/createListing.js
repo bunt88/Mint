@@ -5,7 +5,7 @@ function createListing() {
 
 
     return (
-        <form onSubmit={createListing()}>
+        <form onSubmit={addListing()}>
             <div className='card'>
                 <div className='titleField'>
                     <label for='title'>Title</label>
