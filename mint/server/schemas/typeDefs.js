@@ -10,11 +10,6 @@ const typeDefs = gql`
     category: Schema.Types.ObjectId
   }
 
-  type Category {
-    _id: ID
-    name: String
-  }
-
   type User {
     _id: ID!
     username: String!
@@ -22,28 +17,9 @@ const typeDefs = gql`
     password: String!
   }
 
-  type Order {
-    _id: ID
-    purchaseDate: String
-    products: [Product]
-  }
-
-  type Checkout {
-    session: ID
-  }
-
-  type Auth {
-    token: ID
-    user: User
-  }
-
   type Query {
-    categories: [Category]
-    user: User
-    listing(category: ID, name: String): [Listing]
-    listing(_id: String): Listing
-    order(_id: ID!): Order
-    checkout(products: [ID]!): Checkout
+    user: [User]
+    listing(_id: String): [Listing]
   }
 `;
 

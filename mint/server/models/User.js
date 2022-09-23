@@ -1,8 +1,8 @@
 const { Schema, mongoose} = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const Listing = require('./Listing');
-const Order = require('./Order')
+// IMPORT LISTING SCHEMA
+// IMPORT ORDER SCHEMA
 
 const userSchema = new Schema(
   {
@@ -22,7 +22,7 @@ const userSchema = new Schema(
       required: true,
       minLength: 5 
     },
-    listing: [Listing.schema],
+    listing: [listingSchema],
     orders: [Order.schema],
 
   },
