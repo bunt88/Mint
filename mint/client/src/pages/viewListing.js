@@ -92,8 +92,9 @@ function viewListing() {
             <Link to="/">← Back to Listings</Link>
             <div className='card'>
                 <div className='titleField'>
-                    <h2>{currentListing.title}
+                    <h2>{currentListing.title}</h2>
                 </div>
+                
                 <div className='photo'>
                     <BigImage>
                         {DisplayBigImage('')}
@@ -109,9 +110,6 @@ function viewListing() {
                 </div>
                 <div className='conditionSelect'>
                     <p id="condition">{Condition}</p>
-                </div>
-                <div className='descriptionField'>
-                    <p id='description'>{Description}</p>
                 </div>
             </div>
         </div>

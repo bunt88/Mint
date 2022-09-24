@@ -40,7 +40,7 @@ function App() {
                 path="/" 
                 element={<Home />} 
               />
-              <h1>hello</h1>
+              
               {/* <Route 
                 path="/login" 
                 element={<Login />} 
