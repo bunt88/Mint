@@ -6,13 +6,13 @@ const styles = StyleSheet.create({
     paddingTop: 50,
   },
   resizeBy: {
-    width: 100,
-    height: 100,
+    width: 500,
+    height: 500,
     resizeMode: 'stretch'
   },
 });
 
-const DisplayResizedImage = (url) => {
+const DisplayBigImage = (url) => {
   return (
     <View style={styles.container}>
       <Image
@@ -23,4 +23,4 @@ const DisplayResizedImage = (url) => {
   );
 }
 
-export default DisplayResizedImage;
+export default DisplayBigImage;
