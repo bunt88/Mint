@@ -1,11 +1,12 @@
 import React from "react";
+import Naviagation from "../components/Navbar";
 
 const Home = () => {
-    return( 
-        <div>
-        <h1>Pray this works</h1>
-        </div>
-    )
-}
+  return (
+    <div>
+      <Naviagation></Naviagation>
+    </div>
+  );
+};
 
 export default Home;
