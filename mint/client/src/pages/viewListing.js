@@ -17,6 +17,7 @@ import BigImage from '../components/BigImage'
 import spinner from '../assets/loading.webp'
 
 
+
 function viewListing() {
     const [state, dispatch] = useStoreContext()
     const { id } = useParams()
