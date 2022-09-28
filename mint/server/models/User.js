@@ -23,6 +23,7 @@ const userSchema = new Schema(
       required: true,
       minLength: 5 
     },
+    wishList: [],
     listing: [Listing.schema],
     orders: [Order.schema],
 
