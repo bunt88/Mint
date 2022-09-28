@@ -13,6 +13,7 @@ import Home from "./pages/Home";
 import Navigation from "./components/Navbar";
 import MyListings from "./pages/MyListings";
 import Login from "./pages/LoginSignup";
+import Footer from "./components/Footer";
 import WishList from './pages/WishList';
 // import Cart from './pages/Cart';
 // import CreateListing from './pages/CreateListing'
@@ -25,7 +26,6 @@ import ToysAndFigures from "./pages/categories/ToysAndFigures";
 import TradingCards from "./pages/categories/TradingCards";
 import VintageClothes from "./pages/categories/VintageClothes";
 import VinylRecords from "./pages/categories/VinylRecords";
-
 
 
 const httpLink = createHttpLink({
@@ -54,6 +54,7 @@ function App() {
       <Router>
         <div>
           <Routes>
+
             <Route
               path="/"
               element={<Home />} />
@@ -101,6 +102,7 @@ function App() {
             path="/mylisting"
             element={<MyListings/> }
             />
+            
             {/* <Route 
             path="/cart"
             element={<Cart/> }
@@ -112,6 +114,7 @@ function App() {
           </Routes>
         </div>
       </Router>
+      <Footer />
     </ApolloProvider>
   );
 }

@@ -11,14 +11,14 @@ function Naviagation() {
       style={{
         backgroundColor: "rgb(204, 221, 224)",
         height: "150px",
-        fontSize: "20px",
+        fontSize: "25px",
         color: "white",
       }}
     >
       <Nav className="navbar">
       <Navbar sticky="top" />
       <Container>
-        <Navbar.Brand href="/">Mint</Navbar.Brand>
+        <Navbar.Brand href="/" className="p-4" style={{ fontSize: "50px", color: "rgb(128, 209, 128)" }}>Mint</Navbar.Brand>
         {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
         {/* <Navbar.Collapse id="basic-navbar-nav"> */}
         <Nav.Link href="/login">Login/Signup</Nav.Link>
@@ -39,8 +39,6 @@ function Naviagation() {
         {/* </Navbar.Collapse> */}
       </Container>
       </Nav>
-
-    </Navbar>
   );
 }
 
