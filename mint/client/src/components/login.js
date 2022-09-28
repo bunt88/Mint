@@ -11,7 +11,7 @@ function Login(props) {
                     <input className="w-100" type="text" name="username" placeholder="Email / Username"></input>
                 </div>
                 <div className="m-3">
-                    <input class="w-100" type="text" name="password" placeholder="Password"></input>
+                    <input className="w-100" type="text" name="password" placeholder="Password"></input>
                 </div>
                 <div className="m-3">
                     <button className="w-100" onClick={submit}>Sign In</button>
