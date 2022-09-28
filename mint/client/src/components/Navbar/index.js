@@ -6,7 +6,15 @@ import { BsFillCartFill } from "react-icons/bs";
 
 function Naviagation() {
   return (
-    <Navbar expand="lg">
+    <Navbar
+      expand="lg"
+      style={{
+        backgroundColor: "rgb(204, 221, 224)",
+        height: "150px",
+        fontSize: "20px",
+        color: "white",
+      }}
+    >
       <Navbar sticky="top" />
       <Container>
         <Navbar.Brand to="/Home">Mint</Navbar.Brand>
