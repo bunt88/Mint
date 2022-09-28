@@ -11,6 +11,7 @@ import { setContext } from "@apollo/client/link/context";
 
 import Home from "./pages/Home";
 import Navigation from "./components/Navbar";
+import MyListing from "./pages/myListing";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
