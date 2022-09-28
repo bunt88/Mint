@@ -18,14 +18,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 if (process.env.NODE_ENV === 'production') {
+  console.log('here');
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
 app.get('/', (req, res) => {
+  console.log('hello')
   res.sendFile(path.join(__dirname, '../client/public/index.html'));
 });
 
-
+console.log('30');
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
