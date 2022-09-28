@@ -16,37 +16,29 @@ function Naviagation() {
       }}
     >
       <Nav className="navbar">
-        <Navbar sticky="top" />
-        <Container>
-          <Navbar.Brand
-            to="/Home"
-            className="p-4"
-            style={{ fontSize: "50px", color: "rgb(128, 209, 128)" }}
-          >
-            Mint
-          </Navbar.Brand>
-          {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
-          {/* <Navbar.Collapse id="basic-navbar-nav"> */}
-
-          <NavDropdown title="Categories" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#">Antiques</NavDropdown.Item>
-            <NavDropdown.Item href="#">Vinyl Records</NavDropdown.Item>
-            <NavDropdown.Item href="#">Comic Books</NavDropdown.Item>
-            <NavDropdown.Item href="#">Vintage Clothes</NavDropdown.Item>
-            <NavDropdown.Item href="#">Trading Cards</NavDropdown.Item>
-            <NavDropdown.Item href="#">Toys and Figurines</NavDropdown.Item>
-            <NavDropdown.Item href="#">Stamps</NavDropdown.Item>
-          </NavDropdown>
-          <Nav.Link to="/createListing">Create Listing</Nav.Link>
-          <Nav.Link to="/MyListings">My Listings</Nav.Link>
-          <Nav.Link to="/WishList">Wish List</Nav.Link>
-          <Nav.Link to="/Cart">
-            Cart <BsFillCartFill />
-          </Nav.Link>
-          {/* </Navbar.Collapse> */}
-        </Container>
+      <Navbar sticky="top" />
+      <Container>
+        <Navbar.Brand href="/" className="p-4" style={{ fontSize: "50px", color: "rgb(128, 209, 128)" }}>Mint</Navbar.Brand>
+        {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
+        {/* <Navbar.Collapse id="basic-navbar-nav"> */}
+        <Nav.Link href="/login">Login/Signup</Nav.Link>
+            <NavDropdown title="Categories" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/antiques">Antiques</NavDropdown.Item>
+              <NavDropdown.Item href="/vinylrecords">Vinyl Records</NavDropdown.Item>
+              <NavDropdown.Item href="/comicbooks">Comic Books</NavDropdown.Item>
+              <NavDropdown.Item href="/vintageclothes">Vintage Clothes</NavDropdown.Item>
+              <NavDropdown.Item href="/tradingcards">Trading Cards</NavDropdown.Item>
+              <NavDropdown.Item href="toysandfigures">Toys and Figurines</NavDropdown.Item>
+              <NavDropdown.Item href="/stamps">Stamps</NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="">Create Listing</Nav.Link>
+            <Nav.Link href="/mylisting">My Listings</Nav.Link>
+            <Nav.Link href="/wishlist">Wish List</Nav.Link>
+            <Nav.Link href="">Cart <BsFillCartFill />
+            </Nav.Link>
+        {/* </Navbar.Collapse> */}
+      </Container>
       </Nav>
-    </Navbar>
   );
 }
 
