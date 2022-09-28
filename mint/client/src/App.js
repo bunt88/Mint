@@ -1,25 +1,27 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
-} from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
 
-import Home from './pages/Home'
+import Home from "./pages/Home";
+import Navigation from "./components/Navbar";
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: "/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem('id_token');
+  const token = localStorage.getItem("id_token");
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : "",
     },
   };
 });
@@ -32,16 +34,13 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+      <Navigation />
       <Router>
         <div>
-      
-            <Routes>
-              <Route 
-                path="/" 
-                element={<Home />} 
-              />
-              
-              {/* <Route 
+          <Routes>
+            <Route path="/" element={<Home />} />
+
+            {/* <Route 
                 path="/login" 
                 element={<Login />} 
               />
@@ -65,8 +64,7 @@ function App() {
                 path="*" 
                 element={<NoMatch />} 
               /> */}
-            </Routes>
-         
+          </Routes>
         </div>
       </Router>
     </ApolloProvider>
