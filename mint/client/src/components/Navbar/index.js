@@ -38,9 +38,9 @@ function Naviagation() {
             <NavDropdown.Item href="#">Stamps</NavDropdown.Item>
           </NavDropdown>
           <Nav.Link to="/createListing">Create Listing</Nav.Link>
-          <Nav.Link to="MyListings">My Listings</Nav.Link>
-          <Nav.Link to="WishList">Wish List</Nav.Link>
-          <Nav.Link to="#">
+          <Nav.Link to="/MyListings">My Listings</Nav.Link>
+          <Nav.Link to="/WishList">Wish List</Nav.Link>
+          <Nav.Link to="/Cart">
             Cart <BsFillCartFill />
           </Nav.Link>
           {/* </Navbar.Collapse> */}

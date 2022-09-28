@@ -14,6 +14,17 @@ const Home = () => {
       style={{ background: "rgb(248, 247, 245)" }}
       className="-center"
     >
+      <Row
+        className=" justify-content-center"
+        style={{
+          color: "rgb(128, 209, 128)",
+          fontSize: "50px",
+          fontFamily: "fantasy",
+        }}
+      >
+        Featured Items
+      </Row>
+
       <Row className="justify-content-center">
         <Card
           className="m-3 pt-3"
@@ -22,7 +33,7 @@ const Home = () => {
           <Card.Img
             className="m-2 align-items-center"
             variant="top"
-            src="mint\client\src\assets\images\coming soon.jpg"
+            src="holder.js/100px180"
             style={{ width: 250, height: 150 }}
           />
           <Card.Body>
@@ -38,38 +49,50 @@ const Home = () => {
             </Button>
           </Card.Body>
         </Card>
+
         <Card
-          className="m-3 pt-3 align-items-center"
-          style={{ width: "18rem", background: "rgb(248, 247, 245)" }}
+          className="m-3 pt-3"
+          style={{ width: "18rem", background: "rgb(204, 221, 224)" }}
         >
           <Card.Img
-            className="m-2"
+            className="m-2 align-items-center"
             variant="top"
-            src="#"
+            src="holder.js/100px180"
             style={{ width: 250, height: 150 }}
           />
           <Card.Body>
             <Card.Title>Antiques</Card.Title>
             <Card.Text>info on Antiques</Card.Text>
-            <Button className="" style={{ background: "rgb(204, 221, 224)" }}>
+            <Button
+              shadow="none"
+              size=""
+              className=""
+              style={{ background: "rgb(128, 209, 128)" }}
+            >
               See Antiques
             </Button>
           </Card.Body>
         </Card>
+
         <Card
-          className="m-3 pt-3 align-items-center"
-          style={{ width: "18rem", background: "rgb(248, 247, 245)" }}
+          className="m-3 pt-3"
+          style={{ width: "18rem", background: "rgb(204, 221, 224)" }}
         >
           <Card.Img
-            className="m-2"
+            className="m-2 align-items-center"
             variant="top"
-            src="#"
+            src="holder.js/100px180"
             style={{ width: 250, height: 150 }}
           />
           <Card.Body>
             <Card.Title>Antiques</Card.Title>
             <Card.Text>info on Antiques</Card.Text>
-            <Button className="" style={{ background: "rgb(204, 221, 224)" }}>
+            <Button
+              shadow="none"
+              size=""
+              className=""
+              style={{ background: "rgb(128, 209, 128)" }}
+            >
               See Antiques
             </Button>
           </Card.Body>
@@ -78,55 +101,72 @@ const Home = () => {
 
       <Row className="justify-content-center">
         <Card
-          className="m-3 pt-3 align-items-center"
-          style={{ width: "18rem", background: "rgb(248, 247, 245)" }}
+          className="m-3 pt-3"
+          style={{ width: "18rem", background: "rgb(204, 221, 224)" }}
         >
           <Card.Img
-            className="m-2"
+            className="m-2 align-items-center"
             variant="top"
-            src="#"
+            src="holder.js/100px180"
             style={{ width: 250, height: 150 }}
           />
           <Card.Body>
             <Card.Title>Antiques</Card.Title>
             <Card.Text>info on Antiques</Card.Text>
-            <Button className="" style={{ background: "rgb(204, 221, 224)" }}>
+            <Button
+              shadow="none"
+              size=""
+              className=""
+              style={{ background: "rgb(128, 209, 128)" }}
+            >
               See Antiques
             </Button>
           </Card.Body>
         </Card>
+
         <Card
-          className="m-3 pt-3 align-items-center"
-          style={{ width: "18rem", background: "rgb(248, 247, 245)" }}
+          className="m-3 pt-3"
+          style={{ width: "18rem", background: "rgb(204, 221, 224)" }}
         >
           <Card.Img
-            className="m-2"
+            className="m-2 align-items-center"
             variant="top"
-            src="#"
+            src="holder.js/100px180"
             style={{ width: 250, height: 150 }}
           />
           <Card.Body>
             <Card.Title>Antiques</Card.Title>
             <Card.Text>info on Antiques</Card.Text>
-            <Button className="" style={{ background: "rgb(204, 221, 224)" }}>
+            <Button
+              shadow="none"
+              size=""
+              className=""
+              style={{ background: "rgb(128, 209, 128)" }}
+            >
               See Antiques
             </Button>
           </Card.Body>
         </Card>
+
         <Card
-          className="m-3 pt-3 align-items-center"
-          style={{ width: "18rem", background: "rgb(248, 247, 245)" }}
+          className="m-3 pt-3"
+          style={{ width: "18rem", background: "rgb(204, 221, 224)" }}
         >
           <Card.Img
-            className="m-2"
+            className="m-2 align-items-center"
             variant="top"
-            src="#"
+            src="holder.js/100px180"
             style={{ width: 250, height: 150 }}
           />
           <Card.Body>
             <Card.Title>Antiques</Card.Title>
             <Card.Text>info on Antiques</Card.Text>
-            <Button className="" style={{ background: "rgb(204, 221, 224)" }}>
+            <Button
+              shadow="none"
+              size=""
+              className=""
+              style={{ background: "rgb(128, 209, 128)" }}
+            >
               See Antiques
             </Button>
           </Card.Body>
