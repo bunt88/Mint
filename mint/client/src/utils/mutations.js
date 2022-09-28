@@ -48,6 +48,8 @@ export const ADD_USER = gql`
     }
 `
 
+//Will fix soon
+
 // export const ADD_LISTING = gql`
 //     mutation addListing(
 //         $title: String!
@@ -113,6 +115,7 @@ export const ADD_USER = gql`
 // //         }
 // //     }
 // // `
+
 
 // export const REMOVE_LISTING = gql`
 //     mutation removeListing(
