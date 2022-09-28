@@ -1,15 +1,14 @@
 import React from "react";
-// import Naviagation from "../components/Navbar";
 
 const Home = () => {
   return (
-    <div class="container">
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-ttile">Card Title</h5>
-          <p class="card-text">...</p>
-          <a href="#" class="btn btn-primary">
+    <div className="container">
+      <div className="card" >
+        <img src="..." className="card-img-top" alt="..." />
+        <div className="card-body">
+          <h5 className="card-title">Card Title</h5>
+          <p className="card-text">...</p>
+          <a href="#" className="btn btn-primary">
             ...
           </a>
         </div>
