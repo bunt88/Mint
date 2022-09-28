@@ -2,7 +2,7 @@ import React from "react";
 // import Naviagation from "../components/Navbar";
 
 const Home = () => {
-  return <div className="">{/* <Naviagation></Naviagation> */}</div>;
+  return <div className=""></div>;
 };
 
 export default Home;

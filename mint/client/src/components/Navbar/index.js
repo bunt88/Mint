@@ -21,7 +21,6 @@ function Naviagation() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="navbar">
-            <Nav.Link to="/Home">Home</Nav.Link>
             <NavDropdown title="Categories" id="basic-nav-dropdown">
               <NavDropdown.Item href="#">Antiques</NavDropdown.Item>
               <NavDropdown.Item href="#">Vinyl Records</NavDropdown.Item>
