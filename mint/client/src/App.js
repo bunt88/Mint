@@ -1,32 +1,27 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
-} from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
-import './App.css';
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
 
-
-import Home from './pages/Home'
-// import Success from './pages/Success'
-import OrderHistory from './pages/OrderHistory'
-import LoginSignup from './pages/LoginSignup'
-import Navigation from './components/Navbar'
-import Categories from './pages/Categories'
+import Home from "./pages/Home";
+import Navigation from "./components/Navbar";
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: "/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem('id_token');
+  const token = localStorage.getItem("id_token");
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : "",
     },
   };
 });
@@ -42,24 +37,10 @@ function App() {
       <Navigation />
       <Router>
         <div>
-            <Routes>
-              <Route 
-                path="/" 
-                element={<Home />} 
-              />
-              <Route 
-              path="orderHistory"
-              element={<OrderHistory/>}
-              />
-              <Route 
-              path="login"
-              element={<LoginSignup/>}
-              />
-              <Route 
-              path="categories"
-              element={<Categories/>}
-              />
-              {/* <Route 
+          <Routes>
+            <Route path="/" element={<Home />} />
+
+            {/* <Route 
                 path="/login" 
                 element={<Login />} 
               />
@@ -83,8 +64,7 @@ function App() {
                 path="*" 
                 element={<NoMatch />} 
               /> */}
-            </Routes>
-         
+          </Routes>
         </div>
       </Router>
     </ApolloProvider>

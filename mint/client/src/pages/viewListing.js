@@ -12,11 +12,10 @@ import {
 } from '../utils/actions';
 import { QUERY_LISTINGS } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
-
 import DisplayBigImage from "../components/BigImage";
 import BigImage from '../components/BigImage'
-import { parse } from "graphql";
 import spinner from '../assets/loading.webp'
+
 
 
 function viewListing() {
@@ -106,12 +105,19 @@ function viewListing() {
                     <p id='category'>{category}</p>
                 </div>
                 <div className='priceField'>
-                    <p id="price">{Price}</p>
+                    <strong id="price">{Price}</strong>
                 </div>
                 <div className='conditionSelect'>
                     <p id="condition">{Condition}</p>
                 </div>
             </div>
+            <button onClick={addToCart}>Add to Cart</button>
+            <button
+                disabled={!cart.find((p) => p._id === currentListing._id)}
+                onClick={removeFromCart}
+                >
+                    Remove from Cart
+                </button>
         </div>
         ) : null}
         {loading ? <img src={spinner} alt="loading..." /> : null}

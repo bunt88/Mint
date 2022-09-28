@@ -35,29 +35,4 @@
   to {
     transform: rotate(360deg);
   }
-} */
-/* * {
-  background-color: rgb(248, 247, 245);
-} */
-
-.nav {
-  margin-left: 15px;
-}
-
-.success {
-  margin: 5em 1em 0 1em;
-  /* background-color: rgb(204, 221, 224); */
-}
-
-.orderHdr {
-  padding-top: 5em;
-}
-
-.table {
-  background-color: rgb(204, 221, 224);
-  margin-top: 1em; 
-}
-
-.categories {
-  margin-top: 2em;
 }

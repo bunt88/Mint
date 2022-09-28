@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React from "react";
 
 // function Home() {
@@ -28,3 +29,13 @@
 // }
 
 // export default Home;
+=======
+import React from "react";
+// import Naviagation from "../components/Navbar";
+
+const Home = () => {
+  return <div className=""></div>;
+};
+
+export default Home;
+>>>>>>> origin
