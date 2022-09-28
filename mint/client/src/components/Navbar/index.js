@@ -43,8 +43,4 @@ function Naviagation() {
   );
 }
 
-<<<<<<< HEAD
 export default Naviagation;
-=======
-export default Naviagation;
->>>>>>> origin
