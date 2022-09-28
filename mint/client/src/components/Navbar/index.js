@@ -7,7 +7,7 @@ import { BsFillCartFill } from "react-icons/bs";
 function Naviagation() {
   return (
     <Navbar
-      expand="lg"
+      // expand="lg"
       style={{
         backgroundColor: "rgb(204, 221, 224)",
         height: "150px",
@@ -15,12 +15,13 @@ function Naviagation() {
         color: "white",
       }}
     >
+      <Nav className="navbar">
       <Navbar sticky="top" />
       <Container>
         <Navbar.Brand to="/Home">Mint</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="navbar">
+        {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
+        {/* <Navbar.Collapse id="basic-navbar-nav"> */}
+          
             <NavDropdown title="Categories" id="basic-nav-dropdown">
               <NavDropdown.Item href="#">Antiques</NavDropdown.Item>
               <NavDropdown.Item href="#">Vinyl Records</NavDropdown.Item>
@@ -36,9 +37,10 @@ function Naviagation() {
             <Nav.Link to="#">
               Cart <BsFillCartFill />
             </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+        {/* </Navbar.Collapse> */}
       </Container>
+      </Nav>
+
     </Navbar>
   );
 }

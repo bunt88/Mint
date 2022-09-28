@@ -70,3 +70,61 @@ export const ADD_LISTING = gql`
         }
     }
 `
+
+export const UPDATE_USER = gql`
+    mutation updateUser(
+        $id: String!
+        user {
+            $username: String
+            $email: String
+            $wishList: [String]
+        }
+    ) {
+        token
+        user {
+            _id
+        }
+        username
+        email
+        wishList
+    }
+`
+export const UPDATE_LISTING = gql`
+    mutation updateListing(
+        $id: String!
+        listing: {
+            $title: String
+            $image: String
+            $price: Float
+            $description: String
+            $category: String
+        }
+    ) {
+        token
+        user {
+            _id
+        }
+        listing {
+            title
+            image
+            price
+            description
+            category
+        }
+    }
+`
+
+export const REMOVE_LISTING = gql`
+    mutation removeListing(
+        $id: String!
+    ) {
+        removeListing(
+            where: { id: {_eq: $id} }
+        ) {
+            token
+            user {
+                _id
+            }
+        }
+    }
+`
