@@ -37,11 +37,7 @@ function Login(props) {
                     <input className="w-100" id="email" type="email" name="email" placeholder="Email" onChange={handleChange}></input>
                 </div>
                 <div className="m-3">
-<<<<<<< HEAD
-                    <input className="w-100" type="text" name="password" placeholder="Password"></input>
-=======
                     <input class="w-100" id="password" type="password" name="password" placeholder="Password" onChange={handleChange}></input>
->>>>>>> origin
                 </div>
                 <div className="m-3">
                     <button className="w-100" onClick={submit}>Sign In</button>
