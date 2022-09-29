@@ -45,7 +45,7 @@ function SignUp(props) {
                     </div>
                     <div className="m-3">
                         <button className="w-100" onClick={submit}>Sign Up</button>
-                        <button className="w-100" onClick={() => props.setPage('login')}>Back to Login</button>
+                        <button className="w-100" onClick={() => props.setPage('/')}>Back to Login</button>
                     </div>
                 </div>
                 <div>
