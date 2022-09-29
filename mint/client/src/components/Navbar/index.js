@@ -6,17 +6,16 @@ import { BsFillCartFill } from "react-icons/bs";
 
 function Naviagation() {
   return (
-    <Navbar
-      // expand="lg"
+    <Navbar sticky="top" 
+    // expand="lg"
       style={{
         backgroundColor: "rgb(204, 221, 224)",
         height: "150px",
         fontSize: "25px",
         color: "white",
       }}
-    >
+      >
       <Nav className="navbar">
-      <Navbar sticky="top" />
       <Container>
         <Navbar.Brand href="/" className="p-4" style={{ fontSize: "50px", color: "rgb(128, 209, 128)" }}>Mint</Navbar.Brand>
         {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
@@ -39,6 +38,7 @@ function Naviagation() {
         {/* </Navbar.Collapse> */}
       </Container>
       </Nav>
+      </Navbar>
   );
 }
 
