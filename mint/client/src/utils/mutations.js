@@ -1,5 +1,4 @@
 import { gql } from '@apollo/client';
-import { getDescription } from 'graphql';
 
 export const LOGIN = gql`
     mutation login($email: String!, $password: String!) {
@@ -49,32 +48,32 @@ export const ADD_USER = gql`
     }
 `
 
-//Will fix soon
+// Will fix soon
 
-// export const ADD_LISTING = gql`
-//     mutation addListing(
-//         $title: String!
-//         $image: String!
-//         $price: Float!
-//         $description: String!
-//         $category: String!
-//     ) {
-//         addListing(
-//             title: $title
-//             image: $image
-//             price: $price
-//             description: $description
-//             category: $category
-//         ) {
-//             id
-            // title
-            // image
-            // price
-            // description
-            // category
-//         }
-//     }
-// `
+export const ADD_LISTING = gql`
+    mutation addListing(
+        $title: String!
+        $image: String!
+        $price: Float!
+        $description: String!
+        $category: String!
+    ) {
+        addListing(
+            title: $title
+            image: $image
+            price: $price
+            description: $description
+            category: $category
+        ) {
+            _id
+            title
+            image
+            price
+            description
+            category
+        }
+    }
+`
 
 // export const UPDATE_USER = gql`
 //     mutation updateUser(
@@ -120,13 +119,16 @@ export const ADD_USER = gql`
 
 export const REMOVE_LISTING = gql`
     mutation removeListing(
-        $patch: UpdateUserInput!
-        ) {
-            removeListing(input: $patch) {
-                user {
-                    _id
-                    wishList
+        $id: String
+    ) {
+        removeListing (
+            where: {
+                id: {
+                    _eq: $id
                 }
             }
+        ) {
+            affected_rows
         }
+    }
 `
