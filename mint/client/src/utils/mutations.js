@@ -76,22 +76,22 @@ export const ADD_USER = gql`
 //     }
 // `
 
-export const UPDATE_USER = gql`
-    mutation updateUser(
-        $patch: UpdateUserInput!
-    ) {
-        updateUser(input: $patch) {
-            user {
-                _id!
-                username
-                email
-                password
-                wishList
-                orders
-            }
-        }
-    }
-`
+// export const UPDATE_USER = gql`
+//     mutation updateUser(
+//         $patch: UpdateUserInput!
+//     ) {
+//         updateUser(input: $patch) {
+//             user {
+//                 _id!
+//                 username
+//                 email
+//                 password
+//                 wishList
+//                 orders
+//             }
+//         }
+//     }
+// `
 // // export const UPDATE_LISTING = gql`
 // //     mutation updateListing(
 // //         $id: String!

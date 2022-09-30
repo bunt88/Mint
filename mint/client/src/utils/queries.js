@@ -10,6 +10,7 @@ export const QUERY_LISTINGS = gql`
       description
       category {
         _id
+        name
       }
     }
   }
@@ -23,7 +24,7 @@ export const QUERY_CHECKOUT = gql`
   }
 `;
 
-export const QUERY_ALL_Listings = gql`
+export const QUERY_ALL_LISTINGS = gql`
   {
     listings {
       _id
