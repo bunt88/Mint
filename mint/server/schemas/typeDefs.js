@@ -57,3 +57,25 @@ const typeDefs = gql`
 
 module.exports = typeDefs;
 
+// antique(_id: ID!): Antiques
+    // antiques(category: ID, name: String): [Antiques]
+    // comicbook(_id: ID!): Antiques
+    // comicbooks(category: ID, name: String): [ComicBooks]
+
+ // type Antiques {
+  //   _id: ID!
+  //   title: String!
+  //   image: String!
+  //   price: Float!
+  //   description: String!
+  //   category: Category!
+  // }
+
+  // type ComicBooks {
+  //   _id: ID!
+  //   title: String!
+  //   image: String!
+  //   price: Float!
+  //   description: String!
+  //   category: Category!
+  // }
