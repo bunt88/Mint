@@ -5,7 +5,7 @@ const typeDefs = gql`
     _id: ID!
     title: String!
     image: String!
-    price: Int!
+    price: Float!
     description: String!
     category: Category!
   }
