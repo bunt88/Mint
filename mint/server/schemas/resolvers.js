@@ -1,4 +1,10 @@
-const { Listing, User, Order } = require('../models');
+const { 
+  Listing, 
+  User, 
+  Order, 
+  // Antique, 
+  // ComicBook 
+} = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 
@@ -48,7 +54,45 @@ const resolvers = {
       }
 
       return await Listing.find().populate('category');
-    }
+    },
+    // antiques: async (parent, { _id }) => {
+    //   const params = _id ? { _id } : {};
+    //   return Antique.find(params);
+    // },
+    // antiques: async (parent, { category, name }) => {
+    //   const params = {};
+
+    //   if (category) {
+    //     params.category = category;
+    //   }
+
+    //   if (name) {
+    //     params.name = {
+    //       $regex: name
+    //     };
+    //   }
+
+    //   return await Antique.find().populate('category');
+    // },
+    // comicbooks: async (parent, { _id }) => {
+    //   const params = _id ? { _id } : {};
+    //   return ComicBook.find(params);
+    // },
+    // comicbooks: async (parent, { category, name }) => {
+    //   const params = {};
+
+    //   if (category) {
+    //     params.category = category;
+    //   }
+
+    //   if (name) {
+    //     params.name = {
+    //       $regex: name
+    //     };
+    //   }
+
+    //   return await ComicBook.find().populate('category');
+    // }
   },
   Mutation: {
     addUser: async (parent, args) => {
