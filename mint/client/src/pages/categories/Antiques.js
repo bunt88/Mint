@@ -1,22 +1,15 @@
 import React from "react"
 import { useQuery } from "@apollo/client";
-import { QUERY_LISTINGS } from "../../utils/queries";
-import { useParams } from 'react-router-dom';
+import { QUERY_ANTIQUES } from "../../utils/queries";
 import SingleAntique from '../../components/ListingCards/singleAntique';
 
 
-// import Container from "react-bootstrap/Container";
-// import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
-// import Button from "react-bootstrap/Button";
-// import Card from "react-bootstrap/Card";
-
 export default function Antiques() {
-    const { loading, data } = useQuery(QUERY_LISTINGS)
+    const { loading, data } = useQuery(QUERY_ANTIQUES)
     if (loading) {
       console.log(loading)
     }
-    const antiques = data?.listings || {};
+    const antiques = data?.antiques || {};
     
     if (loading) {
       return (<div>Loading...</div>)
