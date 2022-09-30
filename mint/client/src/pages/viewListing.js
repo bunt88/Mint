@@ -120,15 +120,15 @@ function viewListing() {
     const removeFromCart = () => {
         dispatch({
             type: REMOVE_FROM_CART,
-            _id: currentProduct._id,
+            _id: currentListing._id,
         });
 
-        idbPromise('cart', 'delete', { ...currentProduct });
+        idbPromise('cart', 'delete', { ...currentListing });
     };
 
     return (
         <>
-        {currentProduct && cart ? (
+        {currentListing && cart ? (
         <div className='container my-1'>
             <Link to="/">← Back to Listings</Link>
             <div className='card'>
