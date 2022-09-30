@@ -4,5 +4,11 @@
         "image": "/images/silversurfer.jpeg",
         "price": "149.99",
         "description": "This rare comic book is a hard find!"
+    },
+    {
+        "title": "Superman Issue 78",
+        "image": "/images/superman.jpeg",
+        "price": "229.99",
+        "description": "This superman comic book also shares more of the life of Clark Kent!"
     }
 ]

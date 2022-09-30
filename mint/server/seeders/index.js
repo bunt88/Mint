@@ -17,38 +17,38 @@ db.once('open', async () => {
         await User.deleteMany({});
         await Category.deleteMany({});
         await Listing.deleteMany({});
-        await Antique.deleteMany({})
-        await ComicBook.deleteMany({})
+        // await Antique.deleteMany({})
+        // await ComicBook.deleteMany({})
         await Order.deleteMany({});
 
         const users = await User.insertMany(userSeeds);
         const categories = await Category.insertMany(categorySeeds);
-        const antiques = await Antique.insertMany(antiqueSeeds);
-        const comicbooks = await ComicBook.insertMany(comicbookSeeds)
+        const antiques = await Listing.insertMany(antiqueSeeds);
+        const comicbooks = await Listing.insertMany(comicbookSeeds)
         const orders = await Order.insertMany(orderSeeds);
 
-        for (newAntique of antiques) {
-            const tempcategory = categories[Math.floor(Math.random() * categories.length)]
-            newAntique.category = tempcategory._id;
-            await newAntique.save();
-        }
-
-        for (newComicBook of comicbooks) {
-            const tempcategory = categories[Math.floor(Math.random() * categories.length)]
-            newComicBook.category = tempcategory._id;
-            await newComicBook.save();
-        }
-
-        // for (newListing of antiques) {
+        // for (newAntique of antiques) {
         //     const tempcategory = categories[Math.floor(Math.random() * categories.length)]
-        //     newListing.category = tempcategory._id;
-        //     await newListing.save();
+        //     newAntique.category = tempcategory._id;
+        //     await newAntique.save();
         // }
-        // for (newListing of comicbooks) {
+
+        // for (newComicBook of comicbooks) {
         //     const tempcategory = categories[Math.floor(Math.random() * categories.length)]
-        //     newListing.category = tempcategory._id;
-        //     await newListing.save();
+        //     newComicBook.category = tempcategory._id;
+        //     await newComicBook.save();
         // }
+
+        for (newListing of antiques) {
+            const tempcategory = categories[Math.floor(Math.random() * categories.length)]
+            newListing.category = tempcategory._id;
+            await newListing.save();
+        }
+        for (newListing of comicbooks) {
+            const tempcategory = categories[Math.floor(Math.random() * categories.length)]
+            newListing.category = tempcategory._id;
+            await newListing.save();
+        }
 
         for (newOrders of orders) {
             const tempOrder = orders[Math.floor(Math.random() * orders.length)]

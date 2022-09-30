@@ -1,36 +1,36 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_ANTIQUES = gql`
-  query getAntiques {
-     antiques {
-      _id
-      title
-      image
-      price
-      description
-      category {
-        _id
-        name
-      }
-    }
-  }
-`;
+// export const QUERY_ANTIQUES = gql`
+//   query getAntiques {
+//      antiques {
+//       _id
+//       title
+//       image
+//       price
+//       description
+//       category {
+//         _id
+//         name
+//       }
+//     }
+//   }
+// `;
 
-export const QUERY_COMICBOOKS = gql`
-  query getComicBooks {
-     comicbooks {
-      _id
-      title
-      image
-      price
-      description
-      category {
-        _id
-        name
-      }
-    }
-  }
-`;
+// export const QUERY_COMICBOOKS = gql`
+//   query getComicBooks {
+//      comicbooks {
+//       _id
+//       title
+//       image
+//       price
+//       description
+//       category {
+//         _id
+//         name
+//       }
+//     }
+//   }
+// `;
 
 
 export const QUERY_LISTINGS = gql`
