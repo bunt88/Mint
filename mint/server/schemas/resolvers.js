@@ -47,7 +47,7 @@ const resolvers = {
         };
       }
 
-      return await Listing.find(params).populate('category');
+      return await Listing.find().populate('category');
     }
   },
   Mutation: {

@@ -2,7 +2,7 @@ import React from "react"
 import { useQuery } from "@apollo/client";
 import { QUERY_LISTINGS } from "../../utils/queries";
 import { useParams } from 'react-router-dom';
-import ListingCards from '../../components/ListingCards/singleAntique';
+import SingleAntique from '../../components/ListingCards/singleAntique';
 
 
 // import Container from "react-bootstrap/Container";
@@ -12,19 +12,22 @@ import ListingCards from '../../components/ListingCards/singleAntique';
 // import Card from "react-bootstrap/Card";
 
 export default function Antiques() {
-    const { antiquesId } = useParams();
-    const { data, loading } = useQuery(QUERY_LISTINGS, {
-      variables: {antiquesId: antiquesId}
-    })
-    const antiques = data?.antiques || {};
-
+    const { loading, data } = useQuery(QUERY_LISTINGS)
     if (loading) {
-      return <div>Loading...</div>
+      console.log(loading)
     }
-    return (
-      <div>
-        
-        <ListingCards antiquesId={antiques._id} />
-      </div>
-    )
+    const antiques = data?.listings || {};
+    
+    if (loading) {
+      return (<div>Loading...</div>)
+    } 
+    return(
+        <div>
+          {antiques &&
+            antiques.map((antique) => (
+              <SingleAntique key={antique._id} antique={antique} />
+            ))}
+        </div>
+      );
+   
   }; 

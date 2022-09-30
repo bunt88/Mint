@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_LISTINGS = gql`
-  query getListings($category: ID) {
-    listings(category: $category) {
+  query getListings {
+     listings {
       _id
       title
       image
