@@ -1,4 +1,5 @@
 import React, {useEffect, useState } from "react";
+// import View from '@apollo/client'
 import { Link, useParams } from 'react-router-dom'
 import { useQuery } from '@apollo/client'
 
@@ -11,10 +12,12 @@ import {
     UPDATE_LISTINGS,
 } from '../utils/actions';
 import { QUERY_LISTINGS } from '../utils/queries';
+// import { REMOVE_LISTING } from "../utils/mutations";
 import { idbPromise } from '../utils/helpers';
 import DisplayBigImage from "../components/BigImage";
 import BigImage from '../components/BigImage'
 import spinner from '../assets/loading.webp'
+
 
 
 
@@ -27,6 +30,8 @@ function viewListing() {
     const { loading, data } = useQuery(QUERY_LISTINGS);
 
     const { listings, cart } = state;
+
+    // const [removeListing, { loading: deleting, error: deleteError}] = useMutation(REMOVE_LISTING)
 
     useEffect(() => {
         if (listings.length) {
@@ -53,6 +58,43 @@ function viewListing() {
             })
         }
     }, [listings, data, loading, dispatch, id]);
+
+    // const deleteButton = () => {
+    //     const updateCache = (client) => {
+    //         const data = client.readQuery({
+    //           query: QUERY_LISTINGS,
+    //           variables: 
+    //             currentListing._id,
+    //         });
+    //         const newData = {
+    //           todos: data.todos.filter((t) => t.id !== item.id)
+    //         }
+    //         client.writeQuery({
+    //           query: QUERY_LISTINGS,
+    //           variables:
+    //             currentListing._id,
+    //           data: newData
+    //         });
+    //       }
+    //       const remove = () => {
+    //         if (deleting) return;
+    //         deleteTodo({
+    //           variables: { id: item.id },
+    //           update: updateCache
+    //         });
+    //       };
+    //       return (
+    //         <View style={styles.deleteButton}>
+    //           <Icon
+    //             name="delete"
+    //             size={26}
+    //             onPress={remove}
+    //             disabled={deleting}
+    //             color={"#BC0000"}
+    //           />
+    //         </View>
+    //       )
+    // }
 
     const addToCart = () => {
         const itemInCart = card.find((cartItem) => cartItem._id === id);
