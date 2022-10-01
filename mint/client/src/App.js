@@ -17,7 +17,7 @@ import Footer from "./components/Footer";
 import WishList from './pages/WishList';
 // import ViewListing from './pages'
 // import Cart from './pages/Cart';
-// import CreateListing from './pages/CreateListing'
+import CreateListing from './pages/CreateListing'
 
 // categories 
 import Antiques from "./pages/categories/Antiques";
@@ -71,8 +71,12 @@ function App() {
               path="/wishlist"
               element={<WishList />}
             />
-            <Route
+            {/* <Route
               path="/antiques"
+              element={<Antiques />}
+            /> */}
+            <Route
+              path="/antiques/:categoryId"
               element={<Antiques />}
             />
             <Route
@@ -112,10 +116,10 @@ function App() {
             path="/cart"
             element={<Cart/> }
             /> */}
-            {/* <Route
+            <Route
             path="createlisting"
             element={<CreateListing />}
-            /> */}
+            />
           </Routes>
         </div>
       </Router>
