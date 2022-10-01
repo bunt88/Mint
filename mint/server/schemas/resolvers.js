@@ -112,9 +112,6 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
-    addListing: async (parent, { title, image, price, description, category}) => {
-      return Listing.create({ title, image, price, description, category});
-    },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 

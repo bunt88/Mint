@@ -51,18 +51,28 @@ export const ADD_USER = gql`
 // Will fix soon
 
 export const ADD_LISTING = gql`
-mutation AddListing($title: String!, $price: Float!, $description: String!, $category: String!, $image: String) {
-    addListing(title: $title, price: $price, description: $description, category: $category, image: $image) {
-      _id
-      title
-      image
-      price
-      description
-      category {
-        _id
-      }
+    mutation addListing(
+        $title: String!
+        $image: String!
+        $price: Float!
+        $description: String!
+        $category: String!
+    ) {
+        addListing(
+            title: $title
+            image: $image
+            price: $price
+            description: $description
+            category: $category
+        ) {
+            _id
+            title
+            image
+            price
+            description
+            category
+        }
     }
-  }
 `
 
 // export const UPDATE_USER = gql`

@@ -26,7 +26,6 @@ db.once('open', async () => {
         const antiques = await Listing.insertMany(antiqueSeeds);
         const comicbooks = await Listing.insertMany(comicbookSeeds)
         const orders = await Order.insertMany(orderSeeds);
-        
 
         // for (newAntique of antiques) {
         //     const tempcategory = categories[Math.floor(Math.random() * categories.length)]
@@ -40,16 +39,15 @@ db.once('open', async () => {
         //     await newComicBook.save();
         // }
 
-        for (newAntique of antiques) {
+        for (newListing of antiques) {
             const tempcategory = categories[Math.floor(Math.random() * categories.length)]
-            newAntique.category = tempcategory._id;
-            await newAntique.save();
-            // console.log(antiques);
+            newListing.category = tempcategory._id;
+            await newListing.save();
         }
-        for (newComicBooks of comicbooks) {
+        for (newListing of comicbooks) {
             const tempcategory = categories[Math.floor(Math.random() * categories.length)]
-            newComicBooks.category = tempcategory._id;
-            await newComicBooks.save();
+            newListing.category = tempcategory._id;
+            await newListing.save();
         }
 
         for (newOrders of orders) {
