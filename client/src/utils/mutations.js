@@ -29,6 +29,22 @@ export const ADD_ORDER = gql`
     }
 `
 
+
+export const ADD_LISTING = gql`
+mutation AddListing($title: String!, $price: Float!, $description: String!, $category: String!, $image: String) {
+    addListing(title: $title, price: $price, description: $description, category: $category, image: $image) {
+      _id
+      title
+      image
+      price
+      description
+      category {
+        _id
+      }
+    }
+  }
+`
+
 export const ADD_USER = gql`
     mutation addUser(
         $username: String!
@@ -48,32 +64,32 @@ export const ADD_USER = gql`
     }
 `
 
-// Will fix soon
+// // Will fix soon
 
-export const ADD_LISTING = gql`
-    mutation addListing(
-        $title: String!
-        $image: String!
-        $price: Float!
-        $description: String!
-        $category: String!
-    ) {
-        addListing(
-            title: $title
-            image: $image
-            price: $price
-            description: $description
-            category: $category
-        ) {
-            _id
-            title
-            image
-            price
-            description
-            category
-        }
-    }
-`
+// export const ADD_LISTING = gql`
+//     mutation addListing(
+//         $title: String!
+//         $image: String!
+//         $price: Float!
+//         $description: String!
+//         $category: String!
+//     ) {
+//         addListing(
+//             title: $title
+//             image: $image
+//             price: $price
+//             description: $description
+//             category: $category
+//         ) {
+//             _id
+//             title
+//             image
+//             price
+//             description
+//             category
+//         }
+//     }
+// `
 
 // export const UPDATE_USER = gql`
 //     mutation updateUser(
