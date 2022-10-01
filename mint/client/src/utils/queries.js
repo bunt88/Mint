@@ -34,8 +34,8 @@ import { gql } from '@apollo/client';
 
 
 export const QUERY_LISTINGS = gql`
-  query getListings {
-     listings {
+  query getListings($category: ID) {
+    listings(category: $category) {
       _id
       title
       image
@@ -47,7 +47,7 @@ export const QUERY_LISTINGS = gql`
       }
     }
   }
-`;
+`
 
 export const QUERY_CHECKOUT = gql`
   query getCheckout($listings: [ID]!) {
