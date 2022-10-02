@@ -13,14 +13,14 @@ function Navigation() {
     // expand="lg"
       style={{
         backgroundColor: "rgb(204, 221, 224)",
-        height: "150px",
-        fontSize: "25px",
+        height: "100px",
+        fontSize: "15px",
         color: "white",
       }}
       >
       <Nav className="navbar">
       <Container>
-        <Navbar.Brand href="/" className="p-4" style={{ fontSize: "50px", color: "rgb(128, 209, 128)" }}>Mint</Navbar.Brand>
+        <Navbar.Brand href="/" className="p-1" style={{ fontSize: "50px", color: "rgb(128, 209, 128)" }}>Mint</Navbar.Brand>
         {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
         {/* <Navbar.Collapse id="basic-navbar-nav"> */}
         <Nav.Link href="/login" onClick={() => Auth.logout()}>Logout</Nav.Link>
@@ -33,9 +33,8 @@ function Navigation() {
               <NavDropdown.Item href="toysandfigures">Toys and Figurines</NavDropdown.Item>
               <NavDropdown.Item href="/stamps">Stamps</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="">Create Listing</Nav.Link>
+            <Nav.Link href="/createlisting">Create Listing</Nav.Link>
             <Nav.Link href="/mylisting">My Listings</Nav.Link>
-            <Nav.Link href="/wishlist">Wish List</Nav.Link>
             <Nav.Link href="">Cart <BsFillCartFill />
             </Nav.Link>
         {/* </Navbar.Collapse> */}
@@ -49,14 +48,14 @@ function Navigation() {
     // expand="lg"
       style={{
         backgroundColor: "rgb(204, 221, 224)",
-        height: "150px",
-        fontSize: "25px",
+        height: "10px",
+        fontSize: "15px",
         color: "white",
       }}
       >
       <Nav className="navbar">
       <Container>
-        <Navbar.Brand href="/" className="p-4" style={{ fontSize: "50px", color: "rgb(128, 209, 128)" }}>Mint</Navbar.Brand>
+        <Navbar.Brand href="/" className="p-1" style={{ fontSize: "50px", color: "rgb(128, 209, 128)" }}>Mint</Navbar.Brand>
         {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
         {/* <Navbar.Collapse id="basic-navbar-nav"> */}
         <Nav.Link href="/login">Login/Signup</Nav.Link>
@@ -71,7 +70,6 @@ function Navigation() {
             </NavDropdown>
             <Nav.Link href="">Create Listing</Nav.Link>
             <Nav.Link href="/mylisting">My Listings</Nav.Link>
-            <Nav.Link href="/wishlist">Wish List</Nav.Link>
             <Nav.Link href="">Cart <BsFillCartFill />
             </Nav.Link>
         {/* </Navbar.Collapse> */}
